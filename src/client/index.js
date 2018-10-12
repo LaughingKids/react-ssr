@@ -1,8 +1,16 @@
 import React from "react";
 import ReactDom from "react-dom";
+import {BrowserRouter} from 'react-router-dom';
+import Routes from "../core/Routes";
 
-import Home from "../App/containers/Home/Home";
+const App = () => {
+    return (
+        <BrowserRouter>
+            {Routes}
+        </BrowserRouter>
+    );
+};
 
 const mountPoint = document.getElementById("root");
 
-ReactDom.hydrate(<Home/>, mountPoint);
+ReactDom.hydrate(<App/>, mountPoint);
